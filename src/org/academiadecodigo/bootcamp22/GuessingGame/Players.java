@@ -49,5 +49,6 @@ public class Players {
 
     public void setGuessedNumbers(int n) {
         this.guessedNumbers = new int[n];
+        guesses = 0;
     }
 }
