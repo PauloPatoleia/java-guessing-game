@@ -12,9 +12,9 @@ public class Main {
         Players playersList[] = new Players[2];
 
         playersList[0] = new Players("mahira");
-        playersList[1] = new Players("henrique");
+        //playersList[1] = new Players("henrique");
 
-        Game game10 = new Game(10, playersList);
+        Game game10 = new Game(5, playersList);
         game10.start();
         Game game20 = new Game(20, playersList);
         game20.start();
