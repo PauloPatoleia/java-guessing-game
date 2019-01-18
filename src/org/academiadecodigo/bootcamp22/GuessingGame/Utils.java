@@ -7,7 +7,7 @@ public class Utils {
     public static void setDebuggingMode(boolean mode) {
         debuggingMode = mode;
 
-        if(mode == true) {
+        if(mode) {
             System.out.println("Debugging mode ON");
         }
     }

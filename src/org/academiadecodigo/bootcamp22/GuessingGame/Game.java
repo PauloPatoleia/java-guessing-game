@@ -13,6 +13,7 @@ public class Game {
     public void start() {
 
         Utils.log("Game started!");
+        tellPlayerMaxNumber(this.max);
 
         int chosenNumber = RandomGen.genRandomNumber(this.max);
         boolean RightGuess = false;
@@ -34,7 +35,27 @@ public class Game {
                     break;
 
                 }
+
+                shareGuess(playersList[i], playerGuess);
             }
+        }
+    }
+
+    public void shareGuess(Players player, int guess) {
+
+        for (int i = 0; i < playersList.length ; i++) {
+
+            if(playersList[i] != player) {
+                playersList[i].guessNotify(guess);
+            }
+
+        }
+
+    }
+
+    public void tellPlayerMaxNumber(int max) {
+        for (int i = 0; i < playersList.length ; i++) {
+            playersList[i].setGuessedNumbers(max);
         }
     }
 

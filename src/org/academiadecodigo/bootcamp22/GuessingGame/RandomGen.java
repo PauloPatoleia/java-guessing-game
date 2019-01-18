@@ -4,7 +4,7 @@ public class RandomGen {
 
     public static int genRandomNumber(int n) {
 
-        return (int) Math.floor(Math.random() * n);
+        return (int) Math.floor(Math.random() * n + 1);
 
     }
 }
